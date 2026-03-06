@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <title>Tracker | LogIn</title>
+</head>
+
+<body class="bg-gray-100 flex justify-center items-center py-10">
+
+  <div class="bg-white w-[400px] py-4 px-6 rounded-xl shadow-lg">
+
+    
+    <div class="flex justify-center mb-2">
+      <img src="assets/github-logo.png" class="w-14">
+    </div>
+
+    
+    <h1 class="text-center text-2xl font-semibold">
+      GitHub Issues Tracker
+    </h1>
+
+    <p class="text-center text-gray-500 text-sm mb-4">
+      Sign in to manage your issues
+    </p>
+
+    
+    <label class="text-sm font-medium">Username</label>
+
+    <input id="username"
+      type="text"
+      placeholder="Enter Username"
+      class="w-full mt-1 mb-1 p-2 border rounded-lg "
+    >
+
+    <p class="text-xs text-blue-500 mb-2">Default: admin</p>
+
+    
+    <label class="text-sm font-medium">Password</label>
+
+    <input id="password"
+      type="password"
+      placeholder="Enter password"
+      class="w-full mt-1 mb-1 p-2 border rounded-lg"
+    >
+
+    <p class="text-xs text-blue-500 mb-2">Default: admin123</p>
+
+  
+    <div class="flex items-center mb-3">
+      <input type="checkbox" class="mr-2">
+      <span class="text-sm text-gray-600">Remember me</span>
+    </div>
+
+  
+    <button id="loginBtn"
+      class="w-full py-3 text-white font-semibold rounded-lg
+      bg-purple-800 hover:opacity-90">
+      Sign In
+    </button>
+
+    
+    <p class="text-center text-gray-400 text-sm my-3">
+      OR
+    </p>
+
+    
+    <div class="bg-gray-100 text-center p-3 rounded-lg text-sm">
+
+      <p class="font-semibold mb-1">Demo Credential</p>
+
+      <p>Username: admin</p>
+      <p>Password: admin123</p>
+
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+
+</body>
+</html>
