@@ -12,7 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
-<body class="bg-gray-100 h-screen">
+<body class="bg-gray-100">
     <header>
         <nav class="bg-white shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -38,15 +38,15 @@
                                         clip-rule="evenodd" />
                                 </svg>
                             </span>
-                            <input type="text" placeholder="Search issues.."
+                            <input id="search-in" type="text" placeholder="Search issues.."
                                 class="pl-9 pr-4 py-2 border border-gray-400 rounded-md w-64">
                         </div>
 
 
-                        <button
+                        <button id="search-btn"
                             class="bg-purple-800 text-white px-4 py-2 rounded-md hover:bg-purple-700 font-medium flex items-center space-x-1">
                             <i class="fa-solid fa-plus"></i>
-                            <span>New Issue</span>
+                            <span>Search</span>
                         </button>
                     </div>
 
@@ -59,7 +59,7 @@
     </header>
     <main class="max-w-11/12 mx-auto">
         <div class="bg-white p-4 mt-10 rounded-b-lg">
-            <button id="all" class="btn btn-outline border-gray-400 text-gray-400 mr-2">&nbsp;&nbsp;&nbsp;&nbsp;All
+            <button onclick="loadData()" id="all" class="btn btn-outline border-gray-400 text-gray-400 mr-2">&nbsp;&nbsp;&nbsp;&nbsp;All
                 &nbsp;&nbsp;</button>
             <button id="open" class="btn btn-outline border border-gray-400 text-gray-400 mr-2 ">&nbsp;Open&nbsp;</button>
             <button id="closed" class="btn btn-outline border-gray-400 text-gray-400 ">Closed</button>
@@ -70,22 +70,25 @@
                     <img src="assets/Aperture.png" alt="">
                 </div>
                 <div>
-                    <p class="font-semibold">50 Issues</p>
+                    <p id="allIssu" class="font-semibold">50 Issues</p>
                     <p class="text-gray-400">Track and manage your project issues</p>
                 </div>
             </div>
             <div class="flex justify-center items-center gap-4">
-                <div class="flex justify-center items-center gap-2">
+                <div id="green" class="flex justify-center items-center gap-2">
                     <i class="fa-solid fa-circle text-green-500"></i>
                     <p>Open</p>
                 </div>
-                <div class="flex justify-center items-center gap-2">
+                <div id="purple" class="flex justify-center items-center gap-2">
                     <i class="fa-solid fa-circle text-purple-800"></i>
                     <p>Closed</p>
                 </div>
             </div>
 
         </div>
+        <section id="spin" class="flex justify-center items-center py-8 hidden">
+            <span class="loading loading-bars loading-xl"></span>
+        </section>
         <div class="bg-gray-100 my-1 shadow-sm grid grid-cols-4 p-6" id="card-container">
             <div>
                 <div class="bg-white  p-2 space-y-2 border-t-4 border-green-500 rounded-lg " id="card">
@@ -97,6 +100,9 @@
                     </div>
                     <h2 class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
                         voluptas.</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
                     <div class="flex gap-3">
                         <div class="bg-red-100 border border-red-500 p-2 rounded-full text-red-500">
                             <button><i class="fa-solid fa-bug"></i> &nbsp;BUG</button>
@@ -118,9 +124,28 @@
 
         </div>
 
+        <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_1.showModal()">open modal</button> -->
+
+<dialog id="my_modal_1" class="modal">
+  <div class="modal-box">
+    <div id="detail-container" class="">
+
+    </div>
+   
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-purple-800 text-white">Close</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
 
 
     </main>
+    
     <script src="tracker.js"></script>
 
 </body>
