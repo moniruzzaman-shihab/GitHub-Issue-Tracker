@@ -6,61 +6,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
 
   <title>Tracker | LogIn</title>
+  <style>
+    .geist{
+  font-family: "Geist", sans-serif;
+
+}
+button{
+  cursor:pointer;
+}
+
+</style>
 </head>
 
-<body class="bg-gray-100 flex justify-center items-center py-10">
+<body class="geist bg-gray-100 flex justify-center items-center py-10 max-[510px]:py-6 ">
 
-  <div class="bg-white w-[400px] py-4 px-6 rounded-xl shadow-lg">
+  <div class="bg-white w-[400px] py-4 px-6 rounded-xl max-[510px]:rounded-lg shadow-lg max-[510px]:mx-1">
 
 
-    <div class="flex justify-center mb-2">
-      <img src="assets/github-logo.png" class="w-14">
+    <div class="flex justify-center mb-2 max-[510px]:mb-1">
+      <img src="assets/github-logo.png" class="w-14 max-[510px]:w-10">
     </div>
 
 
-    <h1 class="text-center text-2xl font-semibold">
+    <h1 class="text-center text-2xl max-[510px]:text-xl font-semibold">
       GitHub Issues Tracker
     </h1>
 
-    <p class="text-center text-gray-500 text-sm mb-4">
+    <p class="text-center text-gray-500 text-sm mb-4 max-[510px]:mb-2">
       Sign in to manage your issues
     </p>
 
 
     <label class="text-sm font-medium">Username</label>
 
-    <input id="username" type="text" placeholder="Enter Username" class="w-full mt-1 mb-1 p-2 border border-gray-400 rounded-lg ">
+    <input id="username" type="text" placeholder="Enter Username" class="w-full mt-1 mb-1 p-2 
+    max-[510px]:p-1 border border-gray-400 rounded-lg ">
 
-    <p class="text-xs text-purple-800 mb-2">Default: admin</p>
+    <p class="text-xs text-purple-800 mb-2 max-[510px]:mb-1">Default: admin</p>
 
 
     <label class="text-sm font-medium">Password</label>
 
-    <input id="password" type="password" placeholder="Enter password" class="w-full mt-1 mb-1 p-2 border border-gray-400 rounded-lg">
+    <input id="password" type="password" placeholder="Enter password" class="w-full mt-1 mb-1 p-2 
+    max-[510px]:p-1 border border-gray-400 rounded-lg">
 
-    <p class="text-xs text-purple-800 mb-2">Default: admin123</p>
+    <p class="text-xs text-purple-800 mb-2 max-[510px]:mb-1">Default: admin123</p>
 
 
-    <div class="flex items-center mb-3">
-      <input type="checkbox" class="mr-2">
+    <div class="flex items-center mb-3 max-[510px]:mb-2">
+      <input type="checkbox" class="mr-2 max-[510px]:mr-1">
       <span class="text-sm text-gray-600">Remember me</span>
     </div>
 
 
-    <button id="loginBtn" class="w-full py-3 text-white font-semibold rounded-lg
+    <button id="loginBtn" class="w-full py-3 max-[510px]:py-2 text-white font-semibold rounded-lg
       bg-purple-800 hover:opacity-90">
       Sign In
     </button>
 
 
-    <p class="text-center text-gray-400 text-sm my-3">
+    <p class="text-center text-gray-400 text-sm my-3 max-[510px]:my-2">
       OR
     </p>
 
 
-    <div class="bg-gray-100 text-center p-3 rounded-lg text-sm">
+    <div class="bg-gray-100 text-center p-3 max-[510px]:p-2 rounded-lg text-sm">
 
       <p class="font-semibold mb-1">Demo Credential</p>
 

@@ -10,18 +10,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap" rel="stylesheet">
+<style>
+    .geist{
+  font-family: "Geist", sans-serif;
+
+}
+
+</style>
 </head>
 
-<body class="bg-gray-100">
+<body class="geist bg-gray-100">
     <header>
-        <nav class="bg-white shadow-sm">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="flex justify-between h-16 items-center">
+        <nav class="bg-white shadow-sm max-[510px]:p-2">
+            <div class="max-w-7xl mx-auto px-4 max-[510px]:px-2 ">
+                <div class="flex justify-between h-16 max-[510px]:h-32 items-center max-[510px]:flex-col">
 
 
                     <div class=" flex items-center">
                         <img class="h-8 w-8" src="assets/github-logo.png" alt="GitHub Logo">
-                        <span class="ml-2 font-semibold text-gray-800 text-lg">GitHub Issues Tracker</span>
+                        <span class="ml-2  font-semibold text-gray-800 text-lg">GitHub Issues Tracker</span>
                     </div>
 
 
@@ -29,8 +39,8 @@
 
 
 
-                    <div class="flex gap-2">
-                        <div class="relative">
+                    <div class="flex gap-2 max-[510px]:flex-col max-[510px]:gap-1">
+                        <div class="relative max-[510px]:my-1">
                             <span class="absolute inset-y-0 left-3 flex items-center text-gray-400">
                                 <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd"
@@ -39,12 +49,12 @@
                                 </svg>
                             </span>
                             <input id="search-in" type="text" placeholder="Search issues.."
-                                class="pl-9 pr-4 py-2 border border-gray-400 rounded-md w-64">
+                                class="pl-9 pr-4 py-2 max-[510px]:py-1 border border-gray-400 rounded-md w-64">
                         </div>
 
 
                         <button id="search-btn"
-                            class="bg-purple-800 text-white px-4 py-2 rounded-md hover:bg-purple-700 font-medium flex items-center space-x-1">
+                            class="bg-purple-800 text-white px-4 max-[510px]:px-2 py-2 max-[510px]:py-1 rounded-md hover:bg-purple-700 font-medium flex items-center space-x-1">
                             <i class="fa-solid fa-plus"></i>
                             <span>Search</span>
                         </button>
@@ -58,13 +68,13 @@
         </nav>
     </header>
     <main class="max-w-11/12 mx-auto">
-        <div class="bg-white p-4 mt-10 rounded-b-lg">
-            <button onclick="loadData()" id="all" class="btn btn-outline border-gray-400 text-gray-400 mr-2">&nbsp;&nbsp;&nbsp;&nbsp;All
+        <div class="bg-white p-4 max-[510px]:p-2 mt-10 max-[510px]:mt-6 rounded-lg max-[510px]:text-center">
+            <button onclick="loadData()" id="all" class="btn btn-outline border-gray-400 text-gray-400 mr-2 max-[510px]:mr-0">&nbsp;&nbsp;&nbsp;&nbsp;All
                 &nbsp;&nbsp;</button>
-            <button id="open" class="btn btn-outline border border-gray-400 text-gray-400 mr-2 ">&nbsp;Open&nbsp;</button>
+            <button id="open" class="btn btn-outline border border-gray-400 text-gray-400 mr-2 max-[510px]:mr-0 ">&nbsp;Open&nbsp;</button>
             <button id="closed" class="btn btn-outline border-gray-400 text-gray-400 ">Closed</button>
         </div>
-        <div class="flex justify-between items-center mt-5 p-4 bg-white rounded-t-lg shadow-sm">
+        <div class="flex justify-between max-[510px]:flex-col max-[510px]:gap-1 items-center mt-5 max-[510px]:mt-3 p-4 max-[510px]:p-2 bg-white rounded-t-lg shadow-sm">
             <div class="flex justify-center items-center gap-2">
                 <div class="rounded-full bg-gray-300 p-2">
                     <img src="assets/Aperture.png" alt="">
@@ -74,7 +84,7 @@
                     <p class="text-gray-400">Track and manage your project issues</p>
                 </div>
             </div>
-            <div class="flex justify-center items-center gap-4">
+            <div class="flex justify-center max-[510px]:justify-start items-center gap-4">
                 <div id="green" class="flex justify-center items-center gap-2">
                     <i class="fa-solid fa-circle text-green-500"></i>
                     <p>Open</p>
@@ -86,22 +96,21 @@
             </div>
 
         </div>
-        <section id="spin" class="flex justify-center items-center py-8 hidden">
+        <section id="spin" class="flex justify-center items-center py-8 max-[510px]:py-6 hidden">
             <span class="loading loading-bars loading-xl"></span>
         </section>
-        <div class="bg-gray-100 my-1 shadow-sm grid grid-cols-4 p-6" id="card-container">
+        <div class="bg-gray-100 my-1 shadow-sm grid grid-cols-4 max-[510px]:grid-cols-1 p-6 max-[510px]:p-4" id="card-container">
             <div>
-                <div class="bg-white  p-2 space-y-2 border-t-4 border-green-500 rounded-lg " id="card">
+                <div class="bg-white  p-2 max-[510px]:p-1 space-y-2 border-t-4 border-green-500 rounded-lg " id="card">
                     <div class="flex justify-between items-center">
                         <img src="assets/Open-Status.png" alt="">
-                        <div class="bg-red-100 rounded-full p-2">
+                        <div class="bg-red-100 rounded-full p-2 max-[510px]:p-1">
                             <p class="text-red-500">HIGH</p>
                         </div>
                     </div>
-                    <h2 class="text-gray-400">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum,
-                        voluptas.</h2>
+                 
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                           
                         </p>
                     <div class="flex gap-3">
                         <div class="bg-red-100 border border-red-500 p-2 rounded-full text-red-500">

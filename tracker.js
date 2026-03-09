@@ -136,7 +136,7 @@ detailContainer.innerHTML = `
 ${issue.title}
 </h2>
 
-<div class="flex gap-2 items-center">
+<div class="flex max-[510px]:flex-col gap-2 max-[510px]:gap-1 items-center max-[510px]:justify-start">
 
 <button class="${statusColor} text-white px-2 py-1 rounded">
 ${issue.status}
@@ -148,12 +148,12 @@ ${issue.status}
 
 </div>
 
-<div class="flex gap-1">
+<div class="flex gap-1 max-[510px]:flex-col">
 ${labels}
 </div>
 
 
-<div class="bg-gray-100 p-3 flex justify-between items-center rounded-lg">
+<div class="bg-gray-100 p-3  max-[510px]:p-2 flex justify-between items-center rounded-lg">
 
 <div>
 <p class="text-gray-400 text-sm">Assigned By:</p>
@@ -241,7 +241,7 @@ const div=document.createElement("div")
 
 div.innerHTML=`
 
-<div onclick="loadDetail(${issue.id})" class="bg-white p-2 space-y-1 border-t-4 ${borderColor} rounded-lg m-1 min-h-[280px] mb-5 shadow-sm">
+<div onclick="loadDetail(${issue.id})" class="bg-white p-2 m space-y-1 border-t-4 ${borderColor} rounded-lg m-1 min-h-[280px] mb-5 max-[510px]:mb-3 shadow-sm">
 
 <div class="flex justify-between items-center">
 
@@ -261,7 +261,7 @@ ${issue.title}
 ${issue.description}
 </p>
 
-<div class="flex gap-1">
+<div class="flex max-[510px]:flex-col gap-1">
 ${labels}
 </div>
 
